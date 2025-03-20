@@ -3,7 +3,7 @@
 
 yum search java | grep -i java17
           yum install java-17-amazon-corretto.x86_64 -y 
-
+  wget https://download.sonatype.com/nexus/3/nexus-unix-x86-64-3.78.2-04.tar.gz
 
     2  cd /opt/
     3  ls
