@@ -1,0 +1,88 @@
+Basic Linux Questions
+
+What is the difference between Linux and Unix?
+
+Explain the Linux file system hierarchy.
+
+How do you find the current working directory?
+
+How do you check disk usage?
+
+What's the difference between soft link and hard link?
+
+How do you list hidden files?
+
+What is a symbolic link, and how do you create one?
+
+What is the output of ls -l?
+
+🛠️ File Permissions & Ownership
+How do file permissions work in Linux?
+
+Explain the meaning of rwxr-xr--.
+
+What does the chmod 755 command do?
+
+How do you change file ownership? What’s the difference between chown and chgrp?
+
+How can you recursively change permissions or ownership?
+
+⚙️ Process Management
+How do you view running processes?
+
+What does top, htop, and ps do?
+
+How do you kill a process by name or PID?
+
+What's the difference between nice and renice?
+
+How would you find and troubleshoot a zombie process?
+
+📂 Networking & Services
+How do you check open ports in Linux?
+
+What does netstat, ss, and lsof do?
+
+How do you restart a service in systemd?
+
+How do you check if a port is listening?
+
+How do you test connectivity using ping, telnet, curl, or nc?
+
+🔄 Scheduling and Automation
+What is cron? How do you set a cron job?
+
+What is the syntax of a crontab file?
+
+How do you list, edit, and remove crontab entries?
+
+What's the difference between cron and at?
+
+🐧 System Monitoring & Logs
+Where are system logs stored in Linux?
+
+How do you monitor memory usage, CPU load, and disk I/O?
+
+How can you watch real-time log updates?
+
+How do you find which process is consuming the most memory?
+
+📦 Package Management
+How do you install, remove, or update packages in Debian/Ubuntu (apt)?
+
+Same for RedHat/CentOS (yum/dnf)?
+
+How do you search for packages?
+
+What is the difference between dpkg and apt?
+
+🧪 Scripting & Automation
+How do you write a basic bash script?
+
+How do you make a script executable?
+
+What’s the difference between #!/bin/bash and #!/bin/sh?
+
+How do you pass arguments to a shell script?
+
+What are environment variables and how do you set them?

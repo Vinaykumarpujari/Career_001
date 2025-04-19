@@ -1,0 +1,72 @@
+🧠 Core Git Concepts
+What is Git, and how is it different from other version control systems?
+
+What are the differences between git pull, git fetch, and git merge?
+
+How do you resolve a merge conflict in Git?
+
+What’s the difference between a fast-forward and a three-way merge?
+
+Explain the purpose of .gitignore and how it works.
+
+🔁 Branching & Workflow
+What is the Git branching strategy you follow (e.g., Git Flow, GitHub Flow)?
+
+How do you create, switch, and delete branches?
+
+How do you revert a commit that was already pushed to a shared repository?
+
+What's the difference between git reset, git revert, and git checkout?
+
+When would you use rebase over merge?
+
+🐛 Troubleshooting & Recovery
+How do you undo the last commit without losing changes?
+
+How do you recover a deleted branch or file?
+
+What does the git reflog command do?
+
+How do you handle a "detached HEAD" state?
+
+🌐 GitHub-Specific
+What is the difference between Git and GitHub?
+
+How do pull requests work on GitHub?
+
+What are GitHub Actions? Have you used them in CI/CD pipelines?
+
+How do you manage access and permissions in a GitHub repository?
+
+What are GitHub forks and how are they used in collaboration?
+
+⚙️ DevOps Use Cases
+How do you use Git in your CI/CD pipeline?
+
+How do you version infrastructure code (e.g., Terraform) using Git?
+
+How do you enforce code quality and security in a Git repo (e.g., pre-commit hooks, code scanning)?
+
+How do you manage secrets in GitHub repositories?
+
+How do you automate deployments when a new commit is pushed to a branch?
+
+🔒 Security & Best Practices
+How do you ensure sensitive data is not pushed to Git?
+
+What steps do you take after accidentally committing credentials?
+
+How do you use signed commits (GPG) for verification?
+
+What’s a good Git commit message format or convention?
+
+💡 Advanced Topics
+What is a submodule in Git and when would you use it?
+
+What is Git cherry-pick and when do you use it?
+
+How do you squash commits before merging a PR?
+
+How do you optimize a large Git repository?
+
+How do you deal with a monorepo setup?

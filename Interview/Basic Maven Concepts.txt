@@ -1,0 +1,85 @@
+ Basic Maven Concepts
+What is Maven, and how does it differ from other build tools like Gradle or Ant?
+
+What are the advantages of using Maven in a DevOps pipeline?
+
+What is a POM file and what is its role in a Maven project?
+
+What are the key elements in a pom.xml file?
+
+What is the difference between a Maven project and a normal Java project?
+
+⚙️ Build Lifecycle & Phases
+Can you explain the Maven build lifecycle?
+
+What are the three built-in lifecycles in Maven?
+
+What is the difference between validate, compile, test, package, install, and deploy?
+
+What happens when you run mvn clean install?
+
+How can you skip running tests during a build?
+
+🔌 Plugins & Dependencies
+What are Maven plugins and how are they used?
+
+How do you add a plugin in a pom.xml file?
+
+What’s the difference between build plugins and reporting plugins?
+
+How do you add an external dependency to a Maven project?
+
+What is the difference between compile, provided, runtime, test, and system scopes?
+
+📦 Repositories & Artifacts
+What are Maven repositories (local, central, remote)?
+
+Where is the local Maven repository located on your system?
+
+How do you deploy a built artifact to a remote repository (e.g., Nexus or Artifactory)?
+
+What is a SNAPSHOT version in Maven?
+
+What are the risks of using SNAPSHOT versions in production pipelines?
+
+🔄 DevOps & CI/CD Integration
+How do you integrate Maven in a Jenkins pipeline?
+
+How do you trigger Maven builds automatically on code push?
+
+How do you use Maven for packaging applications in Docker images?
+
+How do you pass environment-specific variables or properties in Maven?
+
+How do you handle build versioning in Maven during CI/CD?
+
+📄 Profiles & Environment Configuration
+What are Maven profiles and why are they useful?
+
+How do you activate a specific Maven profile?
+
+How can you use Maven profiles for environment-specific builds (dev/stage/prod)?
+
+How do you pass system properties or custom values during a Maven build?
+
+💥 Troubleshooting & Optimization
+How do you troubleshoot Maven build failures?
+
+What does the -X option do in Maven?
+
+How can you speed up slow Maven builds?
+
+How do you clean the local repository cache?
+
+How do you resolve dependency conflicts?
+
+🧠 Advanced & Real-World Scenarios
+How do you create a multi-module Maven project?
+
+How would you manage dependency versions across multiple Maven projects?
+
+How do you publish Maven artifacts to Nexus or Artifactory in a CI/CD pipeline?
+
+What is the dependencyManagement tag used for?
+
+How do you create a custom Maven plugin?
