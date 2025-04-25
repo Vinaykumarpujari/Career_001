@@ -1,35 +1,35 @@
-pipeline{
+pipeline {
     agent any
-    
+
     tools {
-        maven 'maven3'
-    }
-    
-    environment{
-        SCANNER_HOME= tool 'sonar-scanner'
+        maven 'maven3' // Define this under Jenkins → Global Tool Configuration
+        sonarQubeScanner 'SonarScanner' // Also define this under tools
     }
 
-    stages{
-        stage("git clone"){
-            steps{
-                git branch: 'main', credentialsId: 'c32c6e7c-3757-42d7-89e2-1928c575d584', url: 'https://github.com/aakumar07/Career_001.git'
+    environment {
+        SONARQUBE_ENV = 'SonarQube'         // Name of SonarQube server in Jenkins config
+        SONAR_TOKEN = credentials('SONAR_TOKEN') // Sonar token stored securely in Jenkins
+    }
+
+    stages {
+        stage("Git Checkout") {
+            steps {
+                git branch: 'main', credentialsId: 'GitHub', url: 'https://github.com/aakumar07/Career_001.git'
             }
         }
 
-        stage("complie"){
-            steps{
-                sh "mvn compile"
+        stage("Compile") {
+            steps {
+                sh "mvn clean compile"
             }
         }
 
-        stage{
-            steps{
-                withSonarQubeEnv('SonarQube') {
-                  sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=career \
-                        -Dsonar.java.binaries=. \
-                        -Dsonar.projectKey=career '''
+        stage("SonarQube Analysis") {
+            steps {
+                withSonarQubeEnv("${SONARQUBE_ENV}") {
+                    sh "mvn verify sonar:sonar -Dsonar.login=${SONAR_TOKEN}"
+                }
             }
         }
     }
-
 }
