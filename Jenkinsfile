@@ -1,6 +1,14 @@
 pipeline{
     agent any
 
+    tools {
+        maven 'maven3'
+    }
+    
+    environment{
+        SCANNER_HOME= tool 'sonar-server'
+    }
+
     stages{
         stage("GitHub repo Clone"){
             steps{
