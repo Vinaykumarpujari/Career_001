@@ -30,7 +30,7 @@ pipeline {
                         -Dsonar.projectName=career \
                         -Dsonar.java.binaries=. \
                         -Dsonar.projectKey=career \
-                        -Dsonar.exclusions=**/Interview/**
+                        -Dsonar.exclusions=**/Interview/**/*Core Git Concepts.txt
                     '''
                 }
             }
