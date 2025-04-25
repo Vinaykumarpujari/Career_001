@@ -18,24 +18,27 @@ pipeline {
 
         stage("Code Compile") {
             steps {
-                sh 'mvn compile'
+                sh "mvn compile"
             }
         }
 
         stage("Code Review") {
             steps {
-                withSonarQubeEnv('sonar-server') {
-                    sh '''${SCANNER_HOME}/bin/sonar-scanner \
+                withSonarQubeEnv('SonarQube') {
+                    sh '''
+                        ${SCANNER_HOME}/bin/sonar-scanner \
                         -Dsonar.projectName=career \
                         -Dsonar.java.binaries=. \
-                        -Dsonar.projectKey=career'''
+                        -Dsonar.projectKey=career \
+                        -Dsonar.exclusions=**/Interview/**
+                    '''
                 }
             }
         }
 
         stage("Build Package") {
             steps {
-                sh 'mvn clean package'
+                sh "mvn clean package"
             }
         }
     }
