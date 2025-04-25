@@ -24,13 +24,13 @@ pipeline {
 
         stage("Code Review") {
             steps {
-                withSonarQubeEnv('sonar-server') {
+                withSonarQubeEnv('sonar') {
                     sh '''
                         ${SCANNER_HOME}/bin/sonar-scanner \
                         -Dsonar.projectName=career \
                         -Dsonar.java.binaries=. \
                         -Dsonar.projectKey=career \
-                        -Dsonar.exclusions=**/Interview/**/*Core Git Concepts.txt
+                        -Dsonar.exclusions=**/Interview/**
                     '''
                 }
             }
