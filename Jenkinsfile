@@ -1,18 +1,14 @@
 pipeline{
     agent any
 
-    tools {
-        maven 'maven3'
-    }
-
     stages{
-        stage("github cloing pahase"){
+        stage("GitHub repo Clone"){
             steps{
                 git branch: 'main', credentialsId: 'GitHub', url: 'https://github.com/aakumar07/Career_001.git'
             }
         }
 
-        stage("maven complie"){
+        stage("Code complile"){
             steps{
                 sh "mvn compile"
             }
