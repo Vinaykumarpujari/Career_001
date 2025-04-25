@@ -2,32 +2,32 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven3' // Define this under Jenkins → Global Tool Configuration
-        sonarQubeScanner 'SonarScanner' // Also define this under tools
+        maven 'maven3'
     }
 
     environment {
-        SONARQUBE_ENV = 'SonarQube'         // Name of SonarQube server in Jenkins config
-        SONAR_TOKEN = credentials('sonar') // Sonar token stored securely in Jenkins
+        SONARQUBE_ENV = 'SonarQube' // This must match the name in Jenkins > Configure System > SonarQube servers
     }
 
     stages {
-        stage("Git Checkout") {
+        stage('Git Checkout') {
             steps {
                 git branch: 'main', credentialsId: 'GitHub', url: 'https://github.com/aakumar07/Career_001.git'
             }
         }
 
-        stage("Compile") {
+        stage('Compile') {
             steps {
-                sh "mvn clean compile"
+                sh 'mvn clean compile'
             }
         }
 
-        stage("SonarQube Analysis") {
+        stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv("${SONARQUBE_ENV}") {
-                    sh "mvn verify sonar:sonar -Dsonar.login=${SONAR_TOKEN}"
+                    withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'TOKEN')]) {
+                        sh 'mvn verify sonar:sonar -Dsonar.login=$TOKEN'
+                    }
                 }
             }
         }
