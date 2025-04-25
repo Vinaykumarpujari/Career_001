@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        SCANNER_HOME = tool 'sonar-server'
+        SCANNER_HOME = tool 'sonar_server'
     }
 
     stages {
@@ -24,14 +24,8 @@ pipeline {
 
         stage("Code Review") {
             steps {
-                withSonarQubeEnv('sonar') {
-                    sh '''
-                        ${SCANNER_HOME}/bin/sonar-scanner \
-                        -Dsonar.projectName=career \
-                        -Dsonar.java.binaries=. \
-                        -Dsonar.projectKey=career \
-                        -Dsonar.exclusions=**/Interview/**
-                    '''
+                withSonarQubeEnv('sonar_server') {
+                    sh "mvn clean sonar:sonar"
                 }
             }
         }
