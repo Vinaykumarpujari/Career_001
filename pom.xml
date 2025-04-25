@@ -18,8 +18,6 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <sonar.host.url>http://172.31.29.214:9000/</sonar.host.url>
-    <sonar.login>admin</sonar.login>
-    <sonar.password>admin123</sonar.password>
   </properties>
 
   <dependencies>
