@@ -22,7 +22,7 @@
         <sonar.projectKey>career:maven-project</sonar.projectKey>
         <sonar.projectName>Career Maven Webapp</sonar.projectName>
         <sonar.projectVersion>1.0</sonar.projectVersion>
-        <sonar.host.url>http://172.31.29.214:9000</sonar.host.url>
+        <sonar.host.url>http://172.31.26.84:9000</sonar.host.url>
         <!-- Avoid putting sonar.login here; use Jenkins credentials -->
     </properties>
 
