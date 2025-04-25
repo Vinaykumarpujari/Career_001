@@ -5,10 +5,6 @@ pipeline {
         maven 'maven3'
     }
 
-    environment {
-        SCANNER_HOME = tool 'sonar_server'
-    }
-
     stages {
         stage("GitHub Repo Clone") {
             steps {
