@@ -52,5 +52,13 @@ pipeline {
               }
             }
         }
+
+        stage ('code-deploy-tomcat') {
+            steps {
+                sshagent(['tomcat']) {
+                sh " scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/Pipeline-project/target/maven-project.war ec2-user@172.31.91.193:/opt/tomcat9/webapps/"
+              } 
+            }
+        }
     }
 }
