@@ -1,0 +1,28 @@
+Today Topic:
+================
+pipeline 
+========
+
+FreeStyle :
+
+GitHhu ====> Jenkins ===> Base Credential GitHub ==> Pipeline Also Same
+
+Maven ==> Manage Jenkins ==> tools ==> install maven
+
+SonarQube ===> SonarQube Scanner ==> Tools install ==> Configuration page will provide sonar url & token ==> Sonar Server the tack admi == security == create token
+
+Poml.xml there one properties tab here provide the sonar url
+
+
+Nexus ====> maven == > conf ==> setting.xml ==> we need provide the nexus repo configuration and with help of username & password as nexus ==> freestyle ==> pipeline ==> manage Jenkins ==> configure setting ==> create one mange configure settings ===> maven ==> nexus repo details also we need mention here .
+
+poml.xml there is one distributed management == we need to provide repos like maven-release & maven-snapshot
+  
+Tomcat ==> FreeStyle Deploy to war container need to configure the tomcat url and credential ===> Pipeline SSHagent ==> configure with help of username with private key ==> then we need to provide scp
+
+scp -i ssh configure == source path and destination path
+
+===================================================================
+
+
+================================================================ 
